@@ -1,0 +1,16 @@
+<%
+  request.setAttribute("pageTitle", "Resume Templates");
+%>
+<%@ include file="includes/header.jsp" %>
+<div class="templates-page wide-page">
+  <header class="page-hero"><div class="eyebrow">/ CAREER TOOLKIT</div><h1>12 free ATS resume templates</h1><p>Choose a distinct layout, then continue in the full Resume Builder with your content and live preview.</p><a class="button button-primary" href="resume.jsp">Open Resume Builder →</a></header>
+  <section class="progress-dashboard"><div><div class="eyebrow">/ PRACTICE PROGRESS</div><h2>Your momentum is building.</h2><p>3 sessions this week · 68% average accuracy</p></div><div class="streak"><strong>7</strong><span>day streak</span></div><div class="mini-bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:86%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:78%"></i></div><a class="button button-dark" href="index.jsp">Practice now →</a></section>
+  <div class="template-filters"><button class="filter-chip active">All</button><button class="filter-chip">ATS</button><button class="filter-chip">Creative</button><button class="filter-chip">Corporate</button></div>
+  <div class="template-grid">
+    <article class="template-card"><div class="template-preview preview-ats"><b>Alex Morgan</b><small>Senior Engineer</small><hr><i></i><i></i><i></i><i></i></div><div class="template-body"><div><h2>ATS Pure</h2><span class="pill teal">FREE</span></div><p>Clean, parsing-friendly structure for serious applications.</p><div class="tag-list"><span>ATS</span><span>Simple</span></div><a href="resume.jsp?template=ats-pure">Use this template →</a></div></article>
+    <article class="template-card"><div class="template-preview preview-blue"><b>Alex Morgan</b><small>Senior Engineer</small><div class="preview-columns"><span></span><i></i><i></i><i></i></div></div><div class="template-body"><div><h2>Blue L-Shape</h2><span class="pill teal">FREE</span></div><p>Confident sidebar layout with an executive feel.</p><div class="tag-list"><span>Corporate</span><span>Sidebar</span></div><a href="resume.jsp?template=blue-l-shape">Use this template →</a></div></article>
+    <article class="template-card"><div class="template-preview preview-green"><b>Alex Morgan</b><small>Senior Engineer</small><hr><i></i><i></i><i></i><i></i></div><div class="template-body"><div><h2>Green Modern</h2><span class="pill teal">FREE</span></div><p>Fresh color and clear hierarchy for modern teams.</p><div class="tag-list"><span>Creative</span><span>Modern</span></div><a href="resume.jsp?template=green-modern">Use this template →</a></div></article>
+    <article class="template-card"><div class="template-preview preview-dark"><b>Alex Morgan</b><small>Senior Engineer</small><hr><i></i><i></i><i></i><i></i></div><div class="template-body"><div><h2>Slate Contemporary</h2><span class="pill teal">FREE</span></div><p>Distinctive contrast without sacrificing readability.</p><div class="tag-list"><span>Creative</span><span>Bold</span></div><a href="resume.jsp?template=slate-contemporary">Use this template →</a></div></article>
+  </div>
+</div>
+<%@ include file="includes/footer.jsp" %>
