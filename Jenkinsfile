@@ -12,7 +12,7 @@ TOMCAT_WEBAPPS = '/opt/tomcat/webapps'
 stages {
 stage('Checkout') {
 steps {
-git branch: 'main', url: 'git@github.com:afzal-baba/CI-CD-pipeline-setup-on-AWS-Linux.git'
+git branch: 'master', url: 'git@github.com:afzal-baba/CI-CD-pipeline-setup-on-AWS-Linux.git'
 }
 }
 stage('Build with Maven') {
