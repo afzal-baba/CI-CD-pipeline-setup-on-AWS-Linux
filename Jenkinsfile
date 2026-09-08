@@ -2,7 +2,7 @@ pipeline {
 agent any
 tools {
 maven 'Maven3' // name must match what you configured in Jenkins Tools
-jdk 'JDK17'
+jdk 'JDK21'
 }
 environment {
 SONARQUBE_ENV = 'MySonarQube'
