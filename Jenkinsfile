@@ -27,7 +27,7 @@ sh 'mvn test'
 }
 stage('Trivy Vulnerability Scan') {
 steps {
-sh 'trivy fs --exit-code 0 --severity HIGH,CRITICAL target/demo-app.war'
+sh 'trivy fs --exit-code 0 --severity HIGH,CRITICAL target/*.war --no-progress'
 }
 }
 stage('SonarQube Analysis') {
