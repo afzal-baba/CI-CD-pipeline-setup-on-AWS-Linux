@@ -6,7 +6,7 @@ jdk 'JDK21'
 }
 environment {
 SONARQUBE_ENV = 'MySonarQube'
-NEXUS_URL = 'http://<nexus-ip>:8081/repository/maven-releases/'
+NEXUS_URL = 'http://172.31.15.106:8081/repository/maven-releases/'
 TOMCAT_WEBAPPS = '/opt/tomcat/webapps'
 }
 stages {
@@ -31,11 +31,11 @@ sh 'trivy fs --exit-code 0 --severity HIGH,CRITICAL target/*.war --no-progress'
 }
 }
 stage('SonarQube Analysis') {
-steps {
-withSonarQubeEnv("${SONARQUBE_ENV}") {
-sh 'mvn sonar:sonar'
-}
-}
+  steps {
+    withSonarQubeEnv('SonarQube') {
+      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar -Dsonar.projectKey=mockinterviewprep -Dsonar.projectName=mockinterviewprep'
+    }
+  }
 }
 stage('Quality Gate') {
 steps {
