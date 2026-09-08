@@ -29,8 +29,8 @@
   </build>
   <distributionManagement>
 <repository>
-<id>nexus-releases</id>
-<url>http://<nexus-ip>:8081/repository/maven-releases/</url>
+<id>nexus</id>
+<url>http://172.31.15.106:8081/repository/maven-releases/</url>
 </repository>
 </distributionManagement>
 </project>
