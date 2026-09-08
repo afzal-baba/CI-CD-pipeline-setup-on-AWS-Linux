@@ -12,7 +12,7 @@ TOMCAT_WEBAPPS = '/opt/tomcat/webapps'
 stages {
 stage('Checkout') {
 steps {
-git branch: 'main', url: 'git@github.com:username/your-repo.git', credentialsId: 'github-sshkey'
+git branch: 'master', url: 'git@github.com:username/your-repo.git', credentialsId: 'github-sshkey'
 }
 }
 stage('Build with Maven') {
