@@ -50,11 +50,10 @@ sh 'mvn deploy'
 }
 }
 stage('Deploy to Tomcat') {
-steps {
-// Tomcat lives on the same server as Jenkins now — plain local copy, no network call needed
-sh 'cp target/demo-app.war ${TOMCAT_WEBAPPS}/'
-}
-}
+  steps {
+    // Tomcat lives on the same server as Jenkins now — plain local copy, no network call needed
+    sh "cp target/*.war ${TOMCAT_WEBAPPS}/ && ls -lh ${TOMCAT_WEBAPPS}/*.war"
+  }
 }
 post {
 success { echo "Pipeline completed successfully!" }
